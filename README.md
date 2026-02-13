@@ -21,7 +21,7 @@ Cloud synchronization is entirely **optional** and uses the user's personal iClo
 The app uses Apple Sign-In and Google Sign-In exclusively, ensuring seamless integration with users' personal cloud storage without requiring separate account credentials.
 
 **Review Environment:**  
-For this review only, traditional email/password authentication has been temporarily enabled via Firebase Remote Config to allow testing without requiring reviewers' personal OAuth credentials. This authentication method will be disabled immediately following App Store approval to maintain our privacy-first standards.
+For this review only, traditional email/password authentication has been temporarily enabled via Firebase Remote Config to allow testing without requiring reviewer's personal OAuth credentials. This authentication method will be disabled immediately following App Store approval to maintain our privacy-first standards.
 
 ### Zero-Knowledge Infrastructure
 The developer **cannot access** user financial details or transaction content at any time. All sensitive data remains under exclusive user control, stored either locally or in their personal cloud accounts.
@@ -40,6 +40,31 @@ Receipt image processing is performed via secure, encrypted API calls to Google'
 ### Compliance
 **Full Privacy Policy:** [https://expnz.github.io/expnz-app/privacy.html](https://expnz.github.io/expnz-app/privacy.html)  
 **Terms of Service:** [https://expnz.github.io/expnz-app/terms.html](https://expnz.github.io/expnz-app/terms.html)
+
+## Subscription Infrastructure & Validation
+
+Expnz utilizes **Firebase Cloud Functions (v2)** to manage a secure, server-side subscription validation pipeline. This ensures that **Pro** features are only unlocked after successful verification with Apple's servers.
+
+### Secure Verification Pipeline
+**Server-to-Server Validation:** The app does not rely on local device logic to unlock features. Instead, it sends a Base64 encoded receipt to our verifyApplePurchase Cloud Function.
+
+**Apple VerifyReceipt Integration:** Our backend communicates directly with Apple’s production (buy.itunes.apple.com) and sandbox (sandbox.itunes.apple.com) endpoints to validate transaction authenticity.
+
+### Anti-Fraud Measures:
+
+**Bundle ID Verification:** The system strictly enforces that receipts must match com.nyl.expnz.
+
+**Ownership Enforcement:** We implement a transaction_ownership check in Firestore to prevent receipt sharing, ensuring a single purchase cannot be used to activate multiple Expnz accounts.
+
+**Replay Attack Prevention:** Every transaction is logged in an immutable Firestore audit trail to prevent the same receipt from being processed multiple times.
+
+### Lifecycle Management
+**Daily Expiration Audits:** A scheduled function (checkExpiredSubscriptions) runs daily at 2:00 AM UTC to automatically deactivate expired accounts that are past their grace period.
+
+**Restore Functionality:** The restoreApplePurchases function allows reviewers to re-sync their "Pro" status without a new transaction, utilizing the same secure server-side validation logic.
+
+**Grace Period Support:** The system recognizes Apple’s billing retry periods, allowing users to maintain access during temporary payment failures.
+
 
 ## For App Review Teams
 
