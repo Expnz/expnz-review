@@ -203,9 +203,6 @@ A: All locally stored data is permanently deleted (standard iOS/Android behavior
 **Q: Can users export their data?**  
 A: Yes. Users can export all bills to ZIP, JSON or CSV format. This ensures data portability.
 
-**Q: How does the rolling bill limit work?**  
-A: Free users can store up to 50 bills; Pro users up to 1,000 bills. When the limit is reached, users must delete old bills to upload new ones. Deleted bills are permanently removed from local and cloud backup.
-
 **Q: What data does Expnz collect?**  
 A: With explicit user consent only:
 - Coarse location (city-level, e.g., "Chennai, India") for regional feature optimization
@@ -258,10 +255,10 @@ Legal terms governing app usage, subscriptions, and user obligations.
 
 ### Company Details
 
-**Legal Entity:** NYL 10 Softwares Private Limited  
+**Legal Entity:** NYL10 Softwares Private Limited  
 **Headquarters:** Chennai, Tamil Nadu, India  
-**Registration:** 
-**Tax ID:** 
+**Registration No: 33AAGCN2029R1Z6** 
+**Tax ID: CHEN10786G** 
 
 
 
