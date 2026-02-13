@@ -143,7 +143,6 @@ Once you have downloaded sample receipts:
 **Bill Limit Testing**
 - Upload more than 50 bills (Free tier limit) without restriction
 - Verify Pro subscription removes the Free tier limitation
-- Confirm up to 1,000 bills can be stored
 
 **Export Functionality**
 - Navigate to Settings → Export
