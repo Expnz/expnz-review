@@ -87,7 +87,6 @@ Once you have downloaded sample receipts:
    - Use password provided in App Review Information
 
 2. **Scan Your First Receipt**
-   - Tap the **"+"** button (bottom center or floating action button)
    - Select **"Take Photo / Select from Gallery"** or **"Upload Files"**
    - Choose a downloaded sample bill from your device
    - Wait for AI processing
