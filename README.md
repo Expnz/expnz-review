@@ -258,7 +258,7 @@ Legal terms governing app usage, subscriptions, and user obligations.
 **Legal Entity:** NYL10 Softwares Private Limited  
 **Headquarters:** Chennai, Tamil Nadu, India  
 **Registration No: 33AAGCN2029R1Z6**
----
+--
 **Tax ID: CHEN10786G** 
 
 
