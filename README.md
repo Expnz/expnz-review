@@ -52,7 +52,7 @@ Expnz utilizes **Firebase Cloud Functions (v2)** to manage a secure, server-side
 
 ### Anti-Fraud Measures:
 
-**Bundle ID Verification:** The system strictly enforces that receipts must match com.nyl.expnz.
+**Bundle ID Verification:** The system strictly enforces that receipts must match **com.nyl.expnz.**
 
 **Ownership Enforcement:** We implement a transaction_ownership check in Firestore to prevent receipt sharing, ensuring a single purchase cannot be used to activate multiple Expnz accounts.
 
