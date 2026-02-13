@@ -213,9 +213,13 @@ A: With explicit user consent only:
 ## Support & Contact
 
 **Primary Contact:**  
-📧 Email: sathish@nyl.technology  
+📧 Email: support@getexpnz.com  
 ⏰ Response Time: Within 2 hours during business hours (9 AM - 6 PM IST, Monday-Friday)  
 🌍 Timezone: India Standard Time (UTC+5:30)
+
+**Escalation Contact:**  
+📧 Email: sathish@nyl.technology
+📞 Phone: +91 93454 62312
 
 **Repository Issues:**  
 If sample bills are inaccessible or URLs are broken, please file an issue in this GitHub repository or contact us directly at the email above.
