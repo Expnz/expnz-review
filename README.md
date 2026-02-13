@@ -188,9 +188,6 @@ Once you have downloaded sample receipts:
 **Q: Why does the reviewer account start with no data?**  
 A: Expnz uses local-first storage with no backend database. Every user, including reviewers, starts with an empty state. Sample bills in the [Sample Bills](Sample%20Bills/) folder are provided specifically for testing purposes.
 
-**Q: How is the reviewer account's Pro subscription validated?**  
-A: The reviewer account (`reviewer@expnz.com`) is whitelisted server-side via Firebase Cloud Functions, bypassing standard App Store subscription validation. This is for review purposes only and does not affect production subscription handling.
-
 **Q: Can I test cloud backup without my personal account?**  
 A: Cloud backup requires the reviewer's personal iCloud (iOS) or Google Drive (Android) credentials. This demonstrates our privacy-first model where data syncs to the user's own cloud storage, not our servers. Backup testing is optional but recommended to verify the feature works correctly.
 
